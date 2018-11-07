@@ -15,14 +15,14 @@ please contact support@d7networks.com or http://sms.d7networks.com for subscript
 ### Zabbix Setup
 
 
-Visit https://github.com/d7networks/zabbix for latest version of D7SMS for Zabbix.
+- Visit https://github.com/d7networks/zabbix for latest version of D7SMS for Zabbix.
 
-Get "AlertScriptsPath" of zabbix setup from zabbix_server.conf
+- Get "AlertScriptsPath" of zabbix setup from zabbix_server.conf
 Download the script to same directory and make it executable
 
-Update USER and PASS inside the script with the credentials recieved from  http://sms.d7networks.com
+- Update USER and PASS inside the script with the credentials recieved from  http://sms.d7networks.com
 
-Open Zabbix panel and go to Administration > Media Types and click on Create media type and input following details
+- Open Zabbix panel and go to Administration > Media Types and click on Create media type and input following details
 
 
 
@@ -35,10 +35,10 @@ Name:D7SMS
         {ALERT.MESSAGE}
 ```
 
-Once created media type, Goto Administration > Users click on the desired User > Media and click on Add
+- Once created media type, Goto Administration > Users click on the desired User > Media and click on Add
 
 
-Enter Mobile number with international prefix at "Send to" option
+- Enter Mobile number with international prefix at "Send to" option
     Select type of alerts (severity) required and enable it. 
     
     
