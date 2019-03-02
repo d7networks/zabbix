@@ -4,8 +4,8 @@
 # Python2 & 3script for sending sms through D7SMS gateway
 # http://d7networks.com
 
-USERNAME = 'API_Username'# d7 sms gateway username
-PASSWORD =  'API_Password'# d7 sms gateway username
+USERNAME = 'API_Username'# d7 sms gateway API Username
+PASSWORD =  'API_Password'# d7 sms gateway API Password
 SOURCE_ADDRESS = 'd7-zab' # source address to be used while sending sms
 
 
