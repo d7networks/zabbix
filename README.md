@@ -7,13 +7,15 @@ For FREE sms credits signup at https://d7networks.com.
 We used Python script for sending SMS notifications in zabbix platfrom using D7SMS gateway.
 
 ## Getting Started
-These instructions will get you a copy of the script and configuration guidelines for setting it up in zabbix
+These instructions will get you a copy of the script and configuration guidelines for setting it up in Zabbix
 
 ## Prerequisites
 
 
 #### D7SMS Subscription
-Signup at https://d7networks.com for subscription and FREE sms credits. Also you can contact zabbix@d7networks.com for support and help
+Signup at https://d7networks.com for subscription and FREE sms credits. 
+
+Also you can contact zabbix@d7networks.com for support and help
 
 
 ### Zabbix Setup
@@ -44,8 +46,10 @@ Name:D7SMS
 
 
 - Enter Mobile number with international prefix at "Send to" option
+
     Select type of alerts (severity) required and enable it. 
     
     
 You can get the latest version of this script from GUTHUB : https://github.com/d7networks/zabbix
+
 For all queries and help on installation please contact zabbix@d7networks.com
