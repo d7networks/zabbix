@@ -1,6 +1,8 @@
 # Zabbix SMS Plugin
 
-Python script for sending SMS notifications in zabbix platfrom using direct7 sms gateway.
+Zabbix SMS notification via D7SMS allows to send worldwide SMS notifications for each hosts and services. 
+For FREE sms credits signup at https://d7networks.com. 
+Python script for sending SMS notifications in zabbix platfrom using D7SMS gateway.
 
 ## Getting Started
 These instructions will get you a copy of the script and configuration guidelines for setting it up in zabbix
@@ -9,7 +11,7 @@ These instructions will get you a copy of the script and configuration guideline
 
 
 #### D7SMS Subscription
-please contact support@d7networks.com or http://sms.d7networks.com for subscription. 
+Signup at https://d7networks.com for subscription and FREE sms credits. Also you can contact zabbix@d7networks.com for support and help
 
 
 ### Zabbix Setup
@@ -20,7 +22,7 @@ please contact support@d7networks.com or http://sms.d7networks.com for subscript
 - Get "AlertScriptsPath" of zabbix setup from zabbix_server.conf
 Download the script to same directory and make it executable
 
-- Update USER and PASS inside the script with the credentials recieved from  http://sms.d7networks.com
+- Update USER and PASS inside the script with the credentials recieved from  https://d7networks.com
 
 - Open Zabbix panel and go to Administration > Media Types and click on Create media type and input following details
 
@@ -43,4 +45,4 @@ Name:D7SMS
     
     
 You can get the latest version of this script from GUTHUB : https://github.com/d7networks/zabbix
-For all queries and help on installation please contact support@d7networks.com
+For all queries and help on installation please contact zabbix@d7networks.com
