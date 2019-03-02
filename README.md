@@ -22,6 +22,7 @@ Signup at https://d7networks.com for subscription and FREE sms credits. Also you
 - Visit https://github.com/d7networks/zabbix for latest version of D7SMS for Zabbix.
 
 - Get "AlertScriptsPath" of zabbix setup from zabbix_server.conf
+
 Download the script to same directory and make it executable
 
 - Update USER and PASS inside the script with the credentials recieved from  https://d7networks.com
