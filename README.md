@@ -1,8 +1,10 @@
 # Zabbix SMS Plugin
 
 Zabbix SMS notification via D7SMS allows to send worldwide SMS notifications for each hosts and services. 
+
 For FREE sms credits signup at https://d7networks.com. 
-Python script for sending SMS notifications in zabbix platfrom using D7SMS gateway.
+
+We used python script for sending SMS notifications in zabbix platfrom using D7SMS gateway.
 
 ## Getting Started
 These instructions will get you a copy of the script and configuration guidelines for setting it up in zabbix
