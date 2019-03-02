@@ -4,8 +4,8 @@
 # Python2 & 3script for sending sms through D7SMS gateway
 # http://d7networks.com
 
-USERNAME = 'USER'# d7 sms gateway username
-PASSWORD =  'PASS'# d7 sms gateway username
+USERNAME = 'API_Username'# d7 sms gateway username
+PASSWORD =  'API_Password'# d7 sms gateway username
 SOURCE_ADDRESS = 'd7-zab' # source address to be used while sending sms
 
 
@@ -36,4 +36,4 @@ if __name__ == '__main__':
                 'content': content
             }
             # Send an SMS-MT to d7 sms gateway
-            urlopen("http://sms.d7networks.com:1401/send?%s" % urlencode(baseParams)).read()
+            urlopen("http://smsc.d7networks.com:1401/send?%s" % urlencode(baseParams)).read()
