@@ -9,14 +9,11 @@ We used Python script for sending SMS notifications in zabbix platfrom using D7S
 ## Getting Started
 These instructions will get you a copy of the script and configuration guidelines for setting it up in Zabbix
 
-## Prerequisites
+### Prerequisites
 
 
 #### D7SMS Subscription
 Signup at https://d7networks.com for subscription and FREE sms credits. 
-
-Also you can contact zabbix@d7networks.com for support and help
-
 
 ### Zabbix Setup
 
