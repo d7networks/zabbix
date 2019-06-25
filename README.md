@@ -30,7 +30,7 @@ cd /usr/lib/zabbix/alertscripts
 wget https://raw.githubusercontent.com/d7networks/zabbix/master/d7sms.py
 chmod +x /usr/lib/zabbix/alertscripts/d7sms.py
 ```
-- Update API_Username and API_Password inside the script with the credentials recieved from  https://d7networks.com
+- Update "API_Username" and "API_Password" inside the script with the credentials recieved from  https://d7networks.com
 ```
 vim /usr/lib/zabbix/alertscripts/d7sms.py
 
