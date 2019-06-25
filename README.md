@@ -34,9 +34,14 @@ chmod +x /usr/lib/zabbix/alertscripts/d7sms.py
 - Update USER and PASS inside the script with the credentials recieved from  https://d7networks.com
 ```
 vim /usr/lib/zabbix/alertscripts/d7sms.py
-Update following line
+
+Update line number 7 and 8
     USERNAME = 'API_Username'# d7 sms gateway API Username
     PASSWORD =  'API_Password'# d7 sms gateway API Password
+
+Change to 
+    USERNAME = 'my_username'# d7 sms gateway API Username
+    PASSWORD =  'my_password'# d7 sms gateway API Password
 ```
 
 - Open Zabbix panel and go to Administration > Media Types and click on Create media type and input following details
