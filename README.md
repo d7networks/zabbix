@@ -23,11 +23,21 @@ Also you can contact zabbix@d7networks.com for support and help
 
 - Visit https://github.com/d7networks/zabbix for latest version of D7SMS for Zabbix.
 
-- Get "AlertScriptsPath" of zabbix setup from zabbix_server.conf
-
-Download the script to same directory and make it executable
-
+- Get "AlertScriptsPath" of zabbix setup from zabbix_server.conf and navigate to same. 
+Default AlertScriptsPath is /usr/lib/zabbix/alertscripts
+ - Download D7SMS script from [here](https://raw.githubusercontent.com/d7networks/zabbix/master/d7sms.py) and make it executable
+```
+cd /usr/lib/zabbix/alertscripts
+wget https://raw.githubusercontent.com/d7networks/zabbix/master/d7sms.py
+chmod +x /usr/lib/zabbix/alertscripts/d7sms.py
+```
 - Update USER and PASS inside the script with the credentials recieved from  https://d7networks.com
+```
+vim /usr/lib/zabbix/alertscripts/d7sms.py
+Update following line
+    USERNAME = 'API_Username'# d7 sms gateway API Username
+    PASSWORD =  'API_Password'# d7 sms gateway API Password
+```
 
 - Open Zabbix panel and go to Administration > Media Types and click on Create media type and input following details
 
