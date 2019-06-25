@@ -21,12 +21,10 @@ Also you can contact zabbix@d7networks.com for support and help
 ### Zabbix Setup
 
 
-- Visit https://github.com/d7networks/zabbix for latest version of D7SMS for Zabbix.
-
 - Get "AlertScriptsPath" of zabbix setup from zabbix_server.conf and navigate to same. 
 
-Default AlertScriptsPath is /usr/lib/zabbix/alertscripts
- - Download D7SMS script from [here](https://raw.githubusercontent.com/d7networks/zabbix/master/d7sms.py) and make it executable
+      Default AlertScriptsPath is /usr/lib/zabbix/alertscripts
+- Download D7SMS script from [here](https://raw.githubusercontent.com/d7networks/zabbix/master/d7sms.py) and make it executable
 ```
 cd /usr/lib/zabbix/alertscripts
 wget https://raw.githubusercontent.com/d7networks/zabbix/master/d7sms.py
