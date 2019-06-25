@@ -12,7 +12,7 @@ These instructions will get you a copy of the script and configuration guideline
 ### Prerequisites
 - D7SMS Subscription
 
-Signup at https://d7networks.com for subscription and FREE sms credits. 
+      Signup at https://d7networks.com for subscription and FREE sms credits. 
 
 ### Zabbix Setup
 
