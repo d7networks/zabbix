@@ -4,7 +4,7 @@
 # Python2 & 3script for sending sms through D7SMS gateway
 # http://d7networks.com
 
-D7TOKEN = "YOUR_D7_TOKEN" # this should be replaced . # can be generated from https://app.d7networks.com/api-tokens
+D7TOKEN = "YOUR_D7_TOKEN" # this should be replaced. Can be generated from https://app.d7networks.com/api-tokens
 
 SOURCE_ADDRESS = 'd7-zab' # source address to be used while sending sms
 GW_URL = "https://api.d7networks.com/messages/v1/send"
