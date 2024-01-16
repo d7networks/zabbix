@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/python3
 # coding=utf-8
 
 # Python2 & 3script for sending sms through D7SMS gateway
