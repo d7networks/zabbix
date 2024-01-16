@@ -28,7 +28,7 @@ chmod +x /usr/lib/zabbix/alertscripts/d7sms.py
 ```
 - Replace the "D7TOKEN" in the script with the token you obtained from https://app.d7networks.com/api-tokens.
 ```
-vim /usr/lib/zabbix/alertscripts/d7sms.py
+vim /usr/lib/zabbix/alertscripts/d7sms.py +7
 
 Update line number 7 
     D7TOKEN = "eyJhbGciOiJIUzI1NiIsInR......."
