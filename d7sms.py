@@ -4,36 +4,46 @@
 # Python2 & 3script for sending sms through D7SMS gateway
 # http://d7networks.com
 
-USERNAME = 'API_Username'# d7 sms gateway API Username
-PASSWORD =  'API_Password'# d7 sms gateway API Password
+D7TOKEN = "YOUR_D7_TOKEN" # this should be replaced . # can be generated from https://app.d7networks.com/api-tokens
+
 SOURCE_ADDRESS = 'd7-zab' # source address to be used while sending sms
+GW_URL = "https://api.d7networks.com/messages/v1/send"
 
-
+import argparse
 import sys
+import json
+import urllib.request
+
 
 if __name__ == '__main__':
-    version = sys.version
-    if version[:1] == '2':
-        from urllib2 import urlopen
-        from urllib import urlencode
-    elif version[:1] == '3':
-        from urllib.request import urlopen
-        from urllib.parse import urlencode
-    # args = parser.parse_args()
-    to = sys.argv[1]
-    content = sys.argv[2]
-    if not (to and content) :
-        print("to and content arguments are required to send sms")
+    content = sys.argv[2].strip('\'')
+    to = sys.argv[1].strip('\'').replace(' ','').split(',')  # will be a list of destinations
+    headers = {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json',
+        'Authorization': 'Bearer ' + D7TOKEN
+    }
+    message_globals = {
+        "originator": SOURCE_ADDRESS,
+    }
+    messages = [ 
+        {
+            "recipients":to,
+            "content": content,
+            "data_coding": "auto"
+        } 
+    ]
+    json_data = json.dumps({
+        "message_globals": message_globals,
+        "messages": messages
+    })
+    
+        
+    req = urllib.request.Request(GW_URL, data=json_data.encode('utf-8'), headers=headers)
+    try:
+        response = urllib.request.urlopen(req, timeout=10)
+    except urllib.error.HTTPError as e:
+        print(f"Failed to send sms, reason: {e.reason}, code: {e.code} ")
     else:
-        content =  content.strip('\'')
-        to = to.strip('\'').split(',') # will be a list of destinations
-        for destination in to:
-            baseParams = {
-                'username': USERNAME,
-                'password': PASSWORD,
-                'from': SOURCE_ADDRESS,
-                'to': destination,
-                'content': content
-            }
-            # Send an SMS-MT to d7 sms gateway
-            urlopen("http://http-api.d7networks.com/send?%s" % urlencode(baseParams)).read()
+        response_data = response.read().decode('utf-8')
+        print(response_data)
