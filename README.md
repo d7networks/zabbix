@@ -44,8 +44,9 @@ Name:D7SMS
         {ALERT.SENDTO}
         {ALERT.MESSAGE}
 ```
-- Click on Message templates tab on the same window and click add 
-    Select Message type as `Problem`, and you will get a predefined script. Click on add 
+- Click on Message templates tab on the same window and click add.
+
+  Select Message type as `Problem`, and you will get a predefined script. Click on add 
     Now add one more template for Recovery
     Select Message type `Problem Recovery` and click add 
     Click on Update once you've added all the templates. 
