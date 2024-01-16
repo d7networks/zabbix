@@ -34,9 +34,7 @@ Update line number 7
     D7TOKEN = "eyJhbGciOiJIUzI1NiIsInR......."
 ```
 
-- Open Zabbix panel and go to Administration > Media Types and click on Create media type and input following details
-
-
+- Open Zabbix panel and navigate to Alerts > Media Types and click on `Create media` type and input following details
 
 ```
 Name:D7SMS
@@ -46,14 +44,23 @@ Name:D7SMS
         {ALERT.SENDTO}
         {ALERT.MESSAGE}
 ```
+- Click on Message templates tab on the same window and click add 
+    Select Message type as `Problem`, and you will get a predefined script. Click on add 
+    Now add one more template for Recovery
+    Select Message type `Problem Recovery` and click add 
+    Click on Update once you've added all the templates. 
 
-- Once created media type, Goto Administration > Users click on the desired User > Media and click on Add
+- Once created media type, Goto Users and click on the desired User
+    Then select the Media tab and click on Add
 
+```
+Choose Type: D7SMS
+Add destaination number with country code for option "Send to"
+Select type of alerts (severity) required and enable it. 
 
-- Enter Mobile number with international prefix at "Send to" option
+```
 
-    Select type of alerts (severity) required and enable it. 
-    
+Click on Update and the alerts will be generated. Also you can check the /var/log/zabbix directory for logs incase if you need to check for errors
     
 You can get the latest version of this script from GUTHUB : https://github.com/d7networks/zabbix
 
