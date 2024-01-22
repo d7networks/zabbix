@@ -17,9 +17,15 @@ These instructions will get you a copy of the script and configuration guideline
 ### Zabbix Setup
 
 
-- Get "AlertScriptsPath" of Zabbix setup from `zabbix_server.conf` and navigate to same. 
+- Get "AlertScriptsPath" of Zabbix setup from `zabbix_server.conf` (also you can get the default path from the following command) and navigate to same.
+- Default AlertScriptsPath is /usr/lib/zabbix/alertscripts
 
-      Default AlertScriptsPath is /usr/lib/zabbix/alertscripts
+```
+      zabbix_server --help | grep AlertScriptsPath
+or
+     cat /etc/zabbix/zabbix_server.conf | grep "AlertScriptsPath"
+      
+```
   
 - Download D7SMS script from [here](https://raw.githubusercontent.com/d7networks/zabbix/master/d7sms.py) and make it executable
 
