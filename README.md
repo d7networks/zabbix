@@ -21,8 +21,8 @@ These instructions will get you a copy of the script and configuration guideline
 - Default AlertScriptsPath is /usr/lib/zabbix/alertscripts
 
 ```
-      zabbix_server --help | grep AlertScriptsPath
-or
+     zabbix_server --help | grep AlertScriptsPath
+     or
      cat /etc/zabbix/zabbix_server.conf | grep "AlertScriptsPath"
       
 ```
