@@ -20,7 +20,6 @@ These instructions will get you a copy of the script and configuration guideline
 - Get "AlertScriptsPath" of Zabbix setup from `zabbix_server.conf` (also you can get the default path from the following command) and navigate to same.
 - Default AlertScriptsPath is: /usr/lib/zabbix/alertscripts
 
-![Get Script Path](https://d7networks.com/images/zabbix/Get-script-path.gif)
 
 
 ```
@@ -29,7 +28,8 @@ These instructions will get you a copy of the script and configuration guideline
      cat /etc/zabbix/zabbix_server.conf | grep "AlertScriptsPath"
       
 ```
-  
+![Get Script Path](https://d7networks.com/images/zabbix/01-Get-script-path.gif)
+
 - Download D7SMS script from [here](https://raw.githubusercontent.com/d7networks/zabbix/master/d7sms.py) and make it executable
 
 ```
@@ -37,6 +37,7 @@ These instructions will get you a copy of the script and configuration guideline
      wget https://raw.githubusercontent.com/d7networks/zabbix/master/d7sms.py
      chmod +x /usr/lib/zabbix/alertscripts/d7sms.py
 ```
+![Get Script Path](https://d7networks.com/images/zabbix/02-Download-script.gif)
 
 - Replace the "D7TOKEN" in the script with the token you obtained from https://app.d7networks.com/api-tokens.
 
@@ -46,6 +47,14 @@ These instructions will get you a copy of the script and configuration guideline
      Update line number 7 
      D7TOKEN = "eyJhbGciOiJIUzI1NiIsInR......."
 ```
+![Get Script Path](https://d7networks.com/images/zabbix/03-Configure-Token.gif)
+
+- You can now test the script using the following command (remember to replace the destination number).
+```
+     ./d7sms.py 971509752655 "Test from Zabbix"
+```
+![Get Script Path](https://d7networks.com/images/zabbix/04-Test-Script.gif)
+
 
 - Open Zabbix panel and navigate to Alerts > Media Types and click on `Create media` type and input following details
 
@@ -57,6 +66,8 @@ These instructions will get you a copy of the script and configuration guideline
           {ALERT.SENDTO}
           {ALERT.MESSAGE}
 ```
+<!-- ![Get Script Path](https://d7networks.com/images/zabbix/05-Create_media.gif) -->
+
 - Click on Message templates tab on the same window and click `add`.
 
      Select Message type as `Problem`, and you will get a predefined script. Click on `add`.
@@ -71,6 +82,9 @@ These instructions will get you a copy of the script and configuration guideline
 
      Then select the Media tab and click on `Add`
 
+![Get Script Path](https://d7networks.com/images/zabbix/05-Create_media.gif)
+
+
 ```
      Choose Type: D7SMS
      Add destination number with country code for the option `Send to`
@@ -78,6 +92,8 @@ These instructions will get you a copy of the script and configuration guideline
 ```
 
 - Click on Update and the alerts will be generated. 
+
+![Get Script Path](https://d7networks.com/images/zabbix/06-Configure-User.gif)
 
 - Also, you can check the /var/log/zabbix directory for logs in case if you need to check for errors
 
