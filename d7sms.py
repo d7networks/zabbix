@@ -30,6 +30,7 @@ if __name__ == '__main__':
         {
             "recipients":to,
             "content": content,
+            "client_ref": "zabbix",
             "data_coding": "auto"
         } 
     ]
