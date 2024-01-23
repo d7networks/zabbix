@@ -6,6 +6,7 @@ For FREE sms credits signup at https://d7networks.com.
 
 We used a Python script for sending SMS notifications in the Zabbix platform using D7SMS gateway.
 
+
 ## Getting Started
 These instructions will get you a copy of the script and configuration guidelines for setting it up in Zabbix
 
@@ -13,6 +14,7 @@ These instructions will get you a copy of the script and configuration guideline
 - D7SMS Subscription
 
      Sign up at https://d7networks.com for subscription and FREE SMS credits. 
+-----------------
 
 ### Zabbix Setup
 
@@ -97,8 +99,17 @@ These instructions will get you a copy of the script and configuration guideline
 
 - Also, you can check the /var/log/zabbix directory for logs in case if you need to check for errors
 
+-----------------
+### Video documentation
+
+[![Watch the video](https://d7networks.com/images/zabbix/Zabbix-Video.png)](https://youtu.be/XXK_m9S91zo)
+
+-----------------
+
 ### Support and Update 
 
 You can get the latest version of this script from Github: https://github.com/d7networks/zabbix
 
 For all queries and help with installation please contact support@d7networks.com
+
+-----------------
