@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 # coding=utf-8
 
-# Python2 & 3script for sending sms through D7SMS gateway
+# Python3 script for sending sms through D7SMS gateway
 # http://d7networks.com
 
 D7TOKEN = "YOUR_D7_TOKEN" # this should be replaced. Can be generated from https://app.d7networks.com/api-tokens
